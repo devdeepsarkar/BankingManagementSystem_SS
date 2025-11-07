@@ -69,7 +69,7 @@ bool handle_admin(int client_socket)
     /* Authenticate */
     if (!authenticate_admin(client_socket, userid_buffer, password_buffer))
     {
-        send(client_socket, "Invalid credential(s).\n", strlen("Invalid credential(s).\n"), 0);
+        send(client_socket, "Error Loging in.\n", strlen("Error Loging in.\n"), 0);
         return false;
     }
 
